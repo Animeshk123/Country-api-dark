@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.light {
+  --background-color: #fafafa;
+  --text-color: #111517;
+  --light-mode-input: #858585;
+  --light-mode-elm: white;
+  --white: white;
+}
+
+body.dark {
+  --background-color: #202c37 !important;
+  --text-color: white !important;
+  --light-mode-input: #858585;
+  --light-mode-elm: #2b3945 !important;
+  --white: #2b3945 !important;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 0.7rem 0;
+  background-color: var(--light-mode-elm);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  color: var(--text-color);
+}
+
+header .container {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+}
+
+header .container h2 {
+  padding: 0.3rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+header .container .switcher {
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  align-items: center img;
+}
+
+header .container .switcher span {
+  margin-left: 0.4rem;
+  font-weight: 600;
+}
+
+.subHeader {
+  width: 100%;
+  height: auto;
+  margin-top: 1.6rem;
+  color: var(--text-color);
+}
+
+.subHeader .container {
+  width: 100%;
+  padding: 0 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subHeader .container .fillter {
+  min-width: 170px;
+  position: relative;
+}
+
+.subHeader .container .fillter .main_fillter {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-mode-elm);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 0.7rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.subHeader .container .fillter .main_fillter p {
+  font-weight: 600;
+  margin-right: 0.7rem;
+  text-transform: capitalize;
+}
+
+.subHeader .container .fillter .fillter_res {
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+  z-index: 100;
+  background-color: var(--white);
+}
+
+.subHeader .container .fillter .fillter_res ul li {
+  list-style: none;
+  padding: 0.6rem 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subHeader .container .fillter .fillter_res ul li:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.subHeader .container .input_div {
+  min-width: 375px;
+  max-width: 375px;
+  position: relative;
+}
+
+.subHeader .container .input_div span {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.subHeader .container .input_div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--light-mode-elm);
+  padding: 0.8rem 0;
+  padding-left: 2.6rem;
+  padding-right: 1rem;
+  color: var(--text-color);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.subHeader .container .input_div input::placeholder {
+  color: var(--text-color);
+}
+
+.grid {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.grid .container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+  grid-template-rows: auto;
+  grid-gap: 4rem;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid .container .card {
+  color: var(--text-color);
+  background-color: var(--light-mode-elm);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.grid .container .card div {
+  height: 180px;
+  display: block;
+}
+
+.grid .container .card div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid .container .card h3 {
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 1rem 1rem;
+}
+
+.grid .container .card ul {
+  padding: 0.8rem 1rem;
+  padding-bottom: 1.2rem;
+}
+
+.grid .container .card ul li {
+  list-style: none;
+  padding: 0.2rem 0 !important;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 15px;
+  }
+
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  header .container h2 {
+    font-size: 1rem !important;
+  }
+
+  .subHeader .container {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .subHeader .container .input_div {
+    margin-bottom: 1.5rem;
+  }
+
+  .subHeader .container .input_div input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 350px !important;
+  }
+}
+
+.open {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: all!important;
+}
+
+img.country {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.loader {
+  width: 100%;
+  height: 3px;
+  position: fixed;
+}
+
+.top {
+  height: 100%;
+  transition: 0.1s ease;
+  width: 0%;
+  background-color: #3F52E3;
+  box-shadow: 4px 4px 10px #3F52E3;
+}
+
+
+.input_res{
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--light-mode-elm);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: 0.1s ease;
+}
+.input_res ul li{
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.input_res ul li:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.show{
+  pointer-events: all!important;
+  opacity: 1!important;
+  visibility: visible!important;
+}
